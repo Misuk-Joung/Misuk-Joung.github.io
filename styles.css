@@ -240,7 +240,7 @@ main {
   margin: 0;
   color: #08285c;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(24px, 2.4vw, 38px);
+  font-size: clamp(20px, 2vw, 31px);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.08;
@@ -782,7 +782,7 @@ p {
   }
 
   .hero-headline-card h1 {
-    font-size: clamp(22px, 3.2vw, 34px);
+    font-size: clamp(19px, 2.8vw, 28px);
   }
 
   .hero-about-card {
