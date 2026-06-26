@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Education | Joung Misuk</title>
-  <meta name="description" content="정미숙(Joung Misuk)의 학력 페이지입니다.">
+  <title>Research | Joung Misuk</title>
+  <meta name="description" content="정미숙(Joung Misuk)의 연구 역량 페이지입니다.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
     </a>
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="index.html" data-i18n="navAbout">About me</a>
-      <a href="research.html" data-i18n="navResearch">Research</a>
+      <a class="active" href="research.html" data-i18n="navResearch">Research</a>
       <a href="publication.html" data-i18n="navPublications">Publications</a>
       <a href="projects.html" data-i18n="navProjects">Projects</a>
       <a href="awards.html" data-i18n="navAwards">Awards</a>
@@ -36,12 +36,12 @@
 
   <main>
     <section class="page-intro">
-      <p class="eyebrow" data-i18n="educationKicker">Education</p>
-      <h1 data-i18n="educationTitle">학력</h1>
+      <p class="eyebrow" data-i18n="skillsKicker">Skills</p>
+      <h1 data-i18n="skillsTitle">연구 및 분석 역량</h1>
     </section>
     <nav class="section-tabs" aria-label="Portfolio page tabs">
       <a class="tab-button" href="index.html" data-i18n="navAbout">About me</a>
-      <a class="tab-button" href="research.html" data-i18n="navResearch">Research</a>
+      <a class="tab-button active" href="research.html" data-i18n="navResearch">Research</a>
       <a class="tab-button" href="publication.html" data-i18n="navPublications">Publications</a>
       <a class="tab-button" href="projects.html" data-i18n="navProjects">Projects</a>
       <a class="tab-button" href="awards.html" data-i18n="navAwards">Awards</a>
@@ -49,29 +49,26 @@
       <a class="tab-button" href="mailto:your.email@example.com" data-i18n="navContact">Contact</a>
     </nav>
     <section class="section">
-      <ol class="timeline">
-        <li>
-          <span>2022 - 2026</span>
-          <div>
-            <h3 data-i18n="eduPhd">서울대학교 약학박사</h3>
-            <p data-i18n="eduPhdDetail">Doctoral degree in Pharmacy, Seoul National University</p>
-          </div>
-        </li>
-        <li>
-          <span>2008 - 2010</span>
-          <div>
-            <h3 data-i18n="eduMaster">이화여자대학교 약학석사</h3>
-            <p data-i18n="eduMasterDetail">Master's degree in Pharmacy, Ewha Womans University</p>
-          </div>
-        </li>
-        <li>
-          <span>2004 - 2008</span>
-          <div>
-            <h3 data-i18n="eduBachelor">대구대학교 생물교육 학사</h3>
-            <p data-i18n="eduBachelorDetail">Bachelor's degree in Biology Education, Daegu University</p>
-          </div>
-        </li>
-      </ol>
+      <div class="skill-groups">
+        <div>
+          <h3 data-i18n="skillGroupOne">Experimental Skills</h3>
+          <ul>
+            <li data-i18n="skillPlaceholder">세부 기술 업데이트 예정</li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="skillGroupTwo">Data &amp; Tools</h3>
+          <ul>
+            <li data-i18n="toolPlaceholder">분석 도구 업데이트 예정</li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="skillGroupThree">Communication</h3>
+          <ul>
+            <li data-i18n="commPlaceholder">발표, 문서화, 협업 경험 업데이트 예정</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 
