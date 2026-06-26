@@ -94,6 +94,11 @@ a {
   color: var(--navy);
 }
 
+.site-nav a.active {
+  border-color: var(--teal);
+  color: var(--navy);
+}
+
 .header-actions {
   display: inline-flex;
   gap: 4px;
@@ -203,6 +208,10 @@ h1 {
   scroll-margin-top: 100px;
   padding: 56px 0;
   border-top: 1px solid var(--line);
+}
+
+.tab-panel[hidden] {
+  display: none;
 }
 
 .section-heading {
