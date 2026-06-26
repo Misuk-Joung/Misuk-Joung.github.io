@@ -109,8 +109,6 @@ const translations = {
 
 const languageButtons = document.querySelectorAll(".lang-button");
 const translatableNodes = document.querySelectorAll("[data-i18n]");
-const tabLinks = document.querySelectorAll("[data-tab]");
-const tabPanels = document.querySelectorAll(".tab-panel:not(#profile)");
 
 function setLanguage(language) {
   const dictionary = translations[language];
@@ -138,39 +136,4 @@ languageButtons.forEach((button) => {
   });
 });
 
-function showTab(tabId, shouldUpdateHash = true) {
-  const targetPanel = document.getElementById(tabId);
-  if (!targetPanel) {
-    return;
-  }
-
-  tabPanels.forEach((panel) => {
-    const isActive = panel.id === tabId;
-    panel.hidden = !isActive;
-    panel.classList.toggle("active", isActive);
-  });
-
-  tabLinks.forEach((tab) => {
-    const isActive = tab.dataset.tab === tabId;
-    tab.classList.toggle("active", isActive);
-    tab.setAttribute("aria-pressed", String(isActive));
-  });
-
-  if (shouldUpdateHash) {
-    history.replaceState(null, "", `#${tabId}`);
-  }
-}
-
-tabLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    showTab(link.dataset.tab);
-    document.getElementById(link.dataset.tab).scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-});
-
-const initialTab = window.location.hash.replace("#", "") || "profile";
-if (initialTab !== "profile") {
-  showTab(initialTab, true);
-}
 setLanguage(localStorage.getItem("portfolioLanguage") || "ko");
