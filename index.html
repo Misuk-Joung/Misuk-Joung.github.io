@@ -12,7 +12,7 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Joung Misuk home">
+    <a class="brand" href="index.html" aria-label="Joung Misuk home">
       <span class="brand-mark">JM</span>
       <span>
         <strong data-i18n="brandName">정미숙</strong>
@@ -21,12 +21,12 @@
     </a>
 
     <nav class="site-nav" aria-label="Primary navigation">
-      <a class="active" href="#profile" data-i18n="navProfile">Profile</a>
-      <a href="#publication" data-i18n="navPublication">Publication</a>
-      <a href="#projects" data-i18n="navProjects">Projects</a>
-      <a href="#skills" data-i18n="navSkills">Skills</a>
-      <a href="#education" data-i18n="navEducation">Education</a>
-      <a href="#awards" data-i18n="navAwards">Awards</a>
+      <a class="active" href="index.html" data-i18n="navProfile">Profile</a>
+      <a href="publication.html" data-i18n="navPublication">Publication</a>
+      <a href="projects.html" data-i18n="navProjects">Projects</a>
+      <a href="skills.html" data-i18n="navSkills">Skills</a>
+      <a href="education.html" data-i18n="navEducation">Education</a>
+      <a href="awards.html" data-i18n="navAwards">Awards</a>
     </nav>
 
     <div class="header-actions" aria-label="Language selector">
@@ -55,6 +55,15 @@
       </article>
     </section>
 
+    <nav class="section-tabs" aria-label="Portfolio page tabs">
+      <a class="tab-button active" href="index.html" data-i18n="navProfile">Profile</a>
+      <a class="tab-button" href="publication.html" data-i18n="navPublication">Publication</a>
+      <a class="tab-button" href="projects.html" data-i18n="navProjects">Projects</a>
+      <a class="tab-button" href="skills.html" data-i18n="navSkills">Skills</a>
+      <a class="tab-button" href="education.html" data-i18n="navEducation">Education</a>
+      <a class="tab-button" href="awards.html" data-i18n="navAwards">Awards</a>
+    </nav>
+
     <section id="profile" class="section">
       <div class="section-heading">
         <p class="section-kicker" data-i18n="profileKicker">Profile</p>
@@ -69,102 +78,6 @@
           <h3 data-i18n="profileStrengthTitle">Core Strengths</h3>
           <p data-i18n="profileStrengthText">문헌 기반 가설 수립, 실험 설계, 데이터 해석, 연구 결과 커뮤니케이션 역량을 중심으로 포트폴리오를 구성할 예정입니다.</p>
         </article>
-      </div>
-    </section>
-
-    <section id="publication" class="section">
-      <div class="section-heading">
-        <p class="section-kicker" data-i18n="publicationKicker">Publication</p>
-        <h2 data-i18n="publicationTitle">논문 및 발표</h2>
-      </div>
-      <div class="empty-state">
-        <p data-i18n="publicationEmpty">논문, 학회 발표, 포스터, 특허 정보를 추가할 공간입니다.</p>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="section-heading">
-        <p class="section-kicker" data-i18n="projectsKicker">Projects</p>
-        <h2 data-i18n="projectsTitle">대표 연구 프로젝트</h2>
-      </div>
-      <div class="card-list">
-        <article class="project-card">
-          <span data-i18n="projectBadge">To be updated</span>
-          <h3 data-i18n="projectOneTitle">연구 프로젝트 01</h3>
-          <p data-i18n="projectOneText">연구 배경, 사용 기술, 본인의 역할, 주요 결과를 요약해서 넣을 예정입니다.</p>
-        </article>
-        <article class="project-card">
-          <span data-i18n="projectBadge">To be updated</span>
-          <h3 data-i18n="projectTwoTitle">연구 프로젝트 02</h3>
-          <p data-i18n="projectTwoText">제약회사 지원 시 직무 연관성이 높은 프로젝트를 우선 배치하면 좋습니다.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" class="section">
-      <div class="section-heading">
-        <p class="section-kicker" data-i18n="skillsKicker">Skills</p>
-        <h2 data-i18n="skillsTitle">연구 및 분석 역량</h2>
-      </div>
-      <div class="skill-groups">
-        <div>
-          <h3 data-i18n="skillGroupOne">Experimental Skills</h3>
-          <ul>
-            <li data-i18n="skillPlaceholder">세부 기술 업데이트 예정</li>
-          </ul>
-        </div>
-        <div>
-          <h3 data-i18n="skillGroupTwo">Data &amp; Tools</h3>
-          <ul>
-            <li data-i18n="toolPlaceholder">분석 도구 업데이트 예정</li>
-          </ul>
-        </div>
-        <div>
-          <h3 data-i18n="skillGroupThree">Communication</h3>
-          <ul>
-            <li data-i18n="commPlaceholder">발표, 문서화, 협업 경험 업데이트 예정</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="section">
-      <div class="section-heading">
-        <p class="section-kicker" data-i18n="educationKicker">Education</p>
-        <h2 data-i18n="educationTitle">학력</h2>
-      </div>
-      <ol class="timeline">
-        <li>
-          <span>2022 - 2026</span>
-          <div>
-            <h3 data-i18n="eduPhd">서울대학교 약학박사</h3>
-            <p data-i18n="eduPhdDetail">Doctoral degree in Pharmacy, Seoul National University</p>
-          </div>
-        </li>
-        <li>
-          <span>2008 - 2010</span>
-          <div>
-            <h3 data-i18n="eduMaster">이화여자대학교 약학석사</h3>
-            <p data-i18n="eduMasterDetail">Master's degree in Pharmacy, Ewha Womans University</p>
-          </div>
-        </li>
-        <li>
-          <span>2004 - 2008</span>
-          <div>
-            <h3 data-i18n="eduBachelor">대구대학교 생물교육 학사</h3>
-            <p data-i18n="eduBachelorDetail">Bachelor's degree in Biology Education, Daegu University</p>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <section id="awards" class="section">
-      <div class="section-heading">
-        <p class="section-kicker" data-i18n="awardsKicker">Awards</p>
-        <h2 data-i18n="awardsTitle">수상 및 자격</h2>
-      </div>
-      <div class="empty-state">
-        <p data-i18n="awardsEmpty">수상, 장학금, 자격증, 교육 이수 내역을 추가할 공간입니다.</p>
       </div>
     </section>
   </main>
