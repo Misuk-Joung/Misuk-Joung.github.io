@@ -128,9 +128,9 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.8fr);
   gap: 28px;
-  align-items: end;
+  align-items: center;
   min-height: calc(100vh - 76px);
   padding: 74px 0 44px;
 }
@@ -178,69 +178,25 @@ h1 {
   font-size: 18px;
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 32px;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  padding: 0 18px;
-  border-radius: 8px;
-  border: 1px solid var(--navy);
-  font-weight: 700;
-}
-
-.button.primary {
-  background: var(--navy);
-  color: #fff;
-}
-
-.button.secondary {
-  background: #fff;
-  color: var(--navy);
-}
-
-.contact-panel {
-  padding: 24px;
+.statement-panel {
+  padding: clamp(24px, 4vw, 38px);
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
   box-shadow: var(--shadow);
 }
 
-.contact-panel dl {
-  display: grid;
-  gap: 18px;
+.statement-panel h2 {
   margin: 0;
-}
-
-.contact-panel div {
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--line);
-}
-
-.contact-panel div:last-child {
-  padding-bottom: 0;
-  border-bottom: 0;
-}
-
-.contact-panel dt {
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.contact-panel dd {
-  margin: 4px 0 0;
   color: var(--navy);
-  font-weight: 700;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.2;
+}
+
+.statement-panel p:last-child {
+  margin: 18px 0 0;
+  color: #536173;
+  font-size: 17px;
 }
 
 .section {
@@ -395,11 +351,6 @@ h1 {
 
   .brand small {
     display: none;
-  }
-
-  .hero-actions,
-  .button {
-    width: 100%;
   }
 
   .content-grid,
