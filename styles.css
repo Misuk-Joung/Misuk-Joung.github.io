@@ -24,8 +24,8 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 72% 12%, rgba(36, 95, 186, 0.12), transparent 30%),
-    linear-gradient(180deg, #f8fbff 0%, var(--bg) 48%, #ffffff 100%);
+    radial-gradient(circle at 78% 8%, rgba(36, 95, 186, 0.13), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f6f9fd 54%, #ffffff 100%);
   color: var(--text);
   font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   line-height: 1.6;
@@ -158,14 +158,15 @@ a {
 }
 
 main {
-  max-width: 1180px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 0 clamp(18px, 4vw, 40px) 72px;
 }
 
 .hero {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.86fr) minmax(360px, 0.9fr);
+  grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1fr);
   gap: clamp(24px, 4vw, 54px);
   align-items: center;
   min-height: calc(100vh - 76px);
@@ -365,22 +366,96 @@ h1 span:last-child {
   border-radius: 14px;
 }
 
-.hero-visual {
+.hero-right {
   position: relative;
   margin: 0;
   min-height: 520px;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 0;
+  isolation: isolate;
 }
 
-.hero-visual img {
-  width: 100%;
-  height: 100%;
-  min-height: 520px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
+.hero-right::before {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  content: "";
+  background-image: url("assets/hero-bg.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.75;
+}
+
+.hero-right::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(246, 250, 255, 0.72) 34%, rgba(215, 231, 252, 0.34) 64%, rgba(141, 184, 234, 0.16) 100%),
+    radial-gradient(circle at 70% 50%, rgba(36, 95, 186, 0.2), transparent 42%);
+}
+
+.molecule-callout {
+  position: absolute;
+  color: var(--blue-dark);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.molecule-callout strong,
+.molecule-callout span {
+  display: block;
+}
+
+.molecule-callout strong {
+  font-size: 13px;
+}
+
+.callout-design {
+  left: 11%;
+  top: 26%;
+}
+
+.callout-optimization {
+  left: 6%;
+  top: 48%;
+}
+
+.callout-innovation {
+  left: 12%;
+  top: 70%;
+}
+
+.callout-design::after,
+.callout-optimization::after,
+.callout-innovation::after {
+  position: absolute;
+  content: "";
+  width: 92px;
+  height: 54px;
+  border: 1px dashed rgba(36, 95, 186, 0.28);
+  border-left: 0;
+  border-bottom: 0;
+  border-radius: 0 48px 0 0;
+}
+
+.callout-design::after {
+  left: 120px;
+  top: 8px;
+}
+
+.callout-optimization::after {
+  left: 112px;
+  top: 12px;
+  transform: rotate(28deg);
+}
+
+.callout-innovation::after {
+  left: 116px;
+  top: -20px;
+  transform: rotate(-18deg);
 }
 
 .section {
@@ -518,8 +593,7 @@ h1 span:last-child {
     padding-top: 44px;
   }
 
-  .hero-visual,
-  .hero-visual img {
+  .hero-right {
     min-height: 360px;
   }
 
@@ -549,6 +623,10 @@ h1 span:last-child {
 
   .feature-icons {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .molecule-callout {
+    display: none;
   }
 
   .timeline li {
