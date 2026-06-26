@@ -20,11 +20,12 @@ const translations = {
     heroTitle: "정미숙",
     heroSubtitle: "제약 연구 개발 분야를 지향하는 의약화학 연구자",
     heroCopy: "약학 기반의 연구 경험을 바탕으로 신약개발, 분자 설계, 약물 평가 분야에서 기여할 수 있는 연구 역량을 정리한 포트폴리오입니다.",
+    heroDescription: "Medicinal chemist with 10+ years of experience in drug discovery, dedicated to bridging small molecules with next-generation therapeutic modalities.",
     heroPrimaryAction: "View Research",
     heroSecondaryAction: "Download CV",
-    featureMedicinalChemistry: "Medicinal Chemistry",
-    featureDrugDiscovery: "Drug Discovery",
-    featureMolecularDesign: "Molecular Design",
+    featureMedicinalChemistry: "Medicinal<br>Chemistry",
+    featureDrugDiscovery: "Drug<br>Discovery",
+    featureMolecularDesign: "Molecular<br>Design",
     featureGPCR: "GPCR",
     calloutDesignTitle: "Molecular Design",
     calloutDesignText: "Structure-based approach",
@@ -104,11 +105,12 @@ const translations = {
     heroTitle: "Joung Misuk",
     heroSubtitle: "Medicinal chemistry researcher pursuing pharmaceutical R&D",
     heroCopy: "A research portfolio summarizing my pharmacy-based training and capabilities in drug discovery, molecular design, and pharmacological evaluation.",
+    heroDescription: "Medicinal chemist with 10+ years of experience in drug discovery, dedicated to bridging small molecules with next-generation therapeutic modalities.",
     heroPrimaryAction: "View Research",
     heroSecondaryAction: "Download CV",
-    featureMedicinalChemistry: "Medicinal Chemistry",
-    featureDrugDiscovery: "Drug Discovery",
-    featureMolecularDesign: "Molecular Design",
+    featureMedicinalChemistry: "Medicinal<br>Chemistry",
+    featureDrugDiscovery: "Drug<br>Discovery",
+    featureMolecularDesign: "Molecular<br>Design",
     featureGPCR: "GPCR",
     calloutDesignTitle: "Molecular Design",
     calloutDesignText: "Structure-based approach",
@@ -177,7 +179,9 @@ function setLanguage(language) {
 
   translatableNodes.forEach((node) => {
     const key = node.dataset.i18n;
-    if (dictionary[key]) {
+    if (dictionary[key] && node.dataset.i18nHtml === "true") {
+      node.innerHTML = dictionary[key];
+    } else if (dictionary[key]) {
       node.textContent = dictionary[key];
     }
   });
