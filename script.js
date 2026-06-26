@@ -110,7 +110,7 @@ const translations = {
 const languageButtons = document.querySelectorAll(".lang-button");
 const translatableNodes = document.querySelectorAll("[data-i18n]");
 const tabLinks = document.querySelectorAll("[data-tab]");
-const tabPanels = document.querySelectorAll(".tab-panel");
+const tabPanels = document.querySelectorAll(".tab-panel:not(#profile)");
 
 function setLanguage(language) {
   const dictionary = translations[language];
@@ -150,10 +150,10 @@ function showTab(tabId, shouldUpdateHash = true) {
     panel.classList.toggle("active", isActive);
   });
 
-  tabLinks.forEach((link) => {
-    const isActive = link.dataset.tab === tabId;
-    link.classList.toggle("active", isActive);
-    link.setAttribute("aria-current", isActive ? "page" : "false");
+  tabLinks.forEach((tab) => {
+    const isActive = tab.dataset.tab === tabId;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-pressed", String(isActive));
   });
 
   if (shouldUpdateHash) {
@@ -170,5 +170,7 @@ tabLinks.forEach((link) => {
 });
 
 const initialTab = window.location.hash.replace("#", "") || "profile";
-showTab(initialTab, Boolean(window.location.hash));
+if (initialTab !== "profile") {
+  showTab(initialTab, true);
+}
 setLanguage(localStorage.getItem("portfolioLanguage") || "ko");

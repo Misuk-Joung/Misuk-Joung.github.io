@@ -99,6 +99,33 @@ a {
   color: var(--navy);
 }
 
+.section-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 0 20px;
+}
+
+.tab-button {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: #3f4a59;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  border-color: var(--teal);
+  color: var(--navy);
+  box-shadow: 0 4px 14px rgba(23, 50, 77, 0.1);
+}
+
 .header-actions {
   display: inline-flex;
   gap: 4px;
