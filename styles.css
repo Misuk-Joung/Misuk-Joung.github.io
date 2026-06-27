@@ -636,7 +636,17 @@ p {
   }
 
   .header-actions {
+    position: relative;
+    z-index: 20;
+    justify-self: end;
     margin-left: 0;
+  }
+
+  .lang-button {
+    min-width: 52px;
+    min-height: 44px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .content-grid,
