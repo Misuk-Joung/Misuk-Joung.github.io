@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joung Misuk | Pharmaceutical R&D Portfolio</title>
   <meta name="description" content="정미숙(Joung Misuk)의 제약 연구 개발 포트폴리오 및 이력서형 웹사이트입니다.">
-  <link rel="stylesheet" href="styles.css?v=11">
+  <link rel="stylesheet" href="styles.css?v=12">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Misuk Joung home">
       <span>
-        <strong>Misuk Joung, Ph.D.</strong>
-        <small>Medicinal Chemist</small>
+        <strong data-i18n="brandName">Misuk Joung, Ph.D.</strong>
+        <small data-i18n="brandRole">Medicinal Chemist</small>
       </span>
     </a>
 
     <nav class="site-nav" aria-label="Primary navigation">
-      <a class="active" href="#about">About me</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#publication">Publication</a>
-      <a href="#awards">Awards</a>
-      <a href="#cv">CV</a>
+      <a class="active" href="#about" data-i18n="navAbout">About me</a>
+      <a href="#research" data-i18n="navResearch">Research</a>
+      <a href="#projects" data-i18n="navProjects">Projects</a>
+      <a href="#publication" data-i18n="navPublications">Publication</a>
+      <a href="#awards" data-i18n="navAwards">Awards</a>
+      <a href="#cv" data-i18n="navCV">CV</a>
     </nav>
 
     <div class="header-actions" aria-label="Language selector">
-      <button class="lang-button active" type="button" data-lang="ko">KOR</button>
-      <button class="lang-button" type="button" data-lang="en">ENG</button>
+      <button class="lang-button" type="button" data-lang="ko">KOR</button>
+      <button class="lang-button active" type="button" data-lang="en">ENG</button>
     </div>
   </header>
 
@@ -36,9 +36,9 @@
       <img class="hero-bg" src="./assets/hero-bg.png" alt="Medicinal chemistry hero background" />
       <div class="hero-headline-text">
         <h1>
-          Designing molecules.<br />
-          Connecting science.<br />
-          <span>Expanding therapeutic possibilities.</span>
+          <span data-i18n="heroTitleLineOne">Designing molecules.</span><br />
+          <span data-i18n="heroTitleLineTwo">Connecting science.</span><br />
+          <span data-i18n="heroTitleLineThree">Expanding therapeutic possibilities.</span>
         </h1>
       </div>
 
@@ -51,6 +51,6 @@
     <p data-i18n="footerText">© 2026 Joung Misuk. Pharmaceutical R&amp;D Portfolio.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

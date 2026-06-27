@@ -198,7 +198,7 @@ main {
   line-height: 1.08;
 }
 
-.hero-headline-text h1 span {
+.hero-headline-text h1 span:last-child {
   color: #3f73c8;
   white-space: nowrap;
 }

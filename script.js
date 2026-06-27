@@ -1,22 +1,22 @@
 const translations = {
   ko: {
-    brandName: "정미숙",
-    brandRole: "Medicinal Chemistry Researcher",
-    navAbout: "About me",
-    navResearch: "Research",
-    navPublications: "Publication",
+    brandName: "정미숙 박사",
+    brandRole: "의약화학 연구자",
+    navAbout: "소개",
+    navResearch: "연구",
+    navPublications: "논문",
     navProfile: "About me",
     navPublication: "Publications",
-    navProjects: "Projects",
+    navProjects: "프로젝트",
     navSkills: "Skills",
     navEducation: "Education",
-    navAwards: "Awards",
-    navCV: "CV",
+    navAwards: "수상",
+    navCV: "이력서",
     navContact: "Contact",
     heroEyebrow: "Medicinal Chemistry Portfolio",
-    heroTitleLineOne: "Designing molecules.",
-    heroTitleLineTwo: "Connecting science.",
-    heroTitleLineThree: "Expanding therapeutic possibilities.",
+    heroTitleLineOne: "분자를 설계하고.",
+    heroTitleLineTwo: "과학을 연결하며.",
+    heroTitleLineThree: "치료 가능성을 확장합니다.",
     heroTitle: "정미숙",
     heroSubtitle: "제약 연구 개발 분야를 지향하는 의약화학 연구자",
     heroCopy: "약학 기반의 연구 경험을 바탕으로 신약개발, 분자 설계, 약물 평가 분야에서 기여할 수 있는 연구 역량을 정리한 포트폴리오입니다.",
@@ -85,8 +85,8 @@ const translations = {
     footerText: "© 2026 Joung Misuk. Pharmaceutical R&D Portfolio."
   },
   en: {
-    brandName: "Joung Misuk",
-    brandRole: "Medicinal Chemistry Researcher",
+    brandName: "Misuk Joung, Ph.D.",
+    brandRole: "Medicinal Chemist",
     navAbout: "About me",
     navResearch: "Research",
     navPublications: "Publication",
@@ -202,4 +202,4 @@ languageButtons.forEach((button) => {
   });
 });
 
-setLanguage(localStorage.getItem("portfolioLanguage") || "ko");
+setLanguage(localStorage.getItem("portfolioLanguage") || "en");
